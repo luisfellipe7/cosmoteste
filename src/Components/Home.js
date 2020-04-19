@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
+import useSearchApi from '../useSearchApi'
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -56,37 +59,27 @@ const SearchButton = styled.div`
   width: 80px;
 `;
 
-const InfoTable = styled.table`
-  border-bottom: 1px solid #ddd;
-`;
-
 const Home = (props) => {
-    const allUsers =
-    props.info && props.info.items && props.info.items &&
-    Object.values(props.info.items).map((e, indice) => {
-      return <p>{e.login}</p>;
-    });
+  const [handle, setHandle] =useState("")
+  const [handleSubmitted, setHandleSubmitted] = useState("")
 
-  const preventReload = async (r) => {
+  const preventReload = (r) => {
     r.preventDefault();
+    setHandleSubmitted(handle)
     console.log("preventing page reload ---");
-    const a = await props.fetchSearch();
-    console.log(a, "a --");
-    props.setInfo(a);
-  }
+  };
 
   return (
     <Body>
-      <Title>Github repo search</Title>
-      <SearchBox>
-        <Search
-          placeholder="username"
-          onChange={(u) => props.setUser(u.target.value)}
-        />
-        <SearchButton onClick={(r) => preventReload(r)}>search</SearchButton>
-      </SearchBox>
-      Total users found: {props.info && props.info.total_count}<br/>
-      {allUsers}
+          <Link to='/user'><Title>Github repo search</Title></Link>
+        <SearchBox>
+          <Search
+            placeholder="username"
+            onChange={(u) => setHandle(u.target.value)}
+          />
+          <Link to={`/users/${handle}`}>Search</Link>
+          {/* <SearchButton onClick={(r) => preventReload(r)}>search</SearchButton> */}
+        </SearchBox>
     </Body>
   );
 };
