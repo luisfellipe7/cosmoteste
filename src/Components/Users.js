@@ -1,5 +1,5 @@
 import React from "react";
-import useSearchApi from "../useSearchApi";
+import useSearchApi from "../Hooks/useFetch";
 import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 
@@ -10,8 +10,10 @@ const TotalUsers = styled.div`
 const Users = (props) => {
   let { searchquery } = useParams();
   console.log(searchquery, "searchquery");
+ 
+  const url = `https://api.github.com/search/users?q=${searchquery}`
 
-  const a = useSearchApi(searchquery);
+  const a = useSearchApi(searchquery, url);
   console.log(a, "a --");
 
   const allUsers =

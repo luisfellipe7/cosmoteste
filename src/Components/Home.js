@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import useSearchApi from '../useSearchApi'
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
@@ -61,13 +60,6 @@ const SearchButton = styled.div`
 
 const Home = (props) => {
   const [handle, setHandle] =useState("")
-  const [handleSubmitted, setHandleSubmitted] = useState("")
-
-  const preventReload = (r) => {
-    r.preventDefault();
-    setHandleSubmitted(handle)
-    console.log("preventing page reload ---");
-  };
 
   return (
     <Body>
@@ -78,7 +70,6 @@ const Home = (props) => {
             onChange={(u) => setHandle(u.target.value)}
           />
           <Link to={`/users/${handle}`}>Search</Link>
-          {/* <SearchButton onClick={(r) => preventReload(r)}>search</SearchButton> */}
         </SearchBox>
     </Body>
   );
