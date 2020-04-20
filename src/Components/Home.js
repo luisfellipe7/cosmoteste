@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -39,21 +39,27 @@ const Search = styled.input`
   border-bottom: 1px solid #757575;
   outline: none;
   background-color: #f7f7ff;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 `;
 
 const Home = (props) => {
-  const [handle, setHandle] =useState("")
+  const [handle, setHandle] = useState("");
   return (
     <Body>
-          <Link to='/'><Title>Github repo search</Title></Link>
-        <SearchBox>
-          <Search
-            placeholder="username"
-            onChange={(u) => setHandle(u.target.value)}
-          />
-          <Link to={`/users/${handle}`}><Button variant="contained" color="primary">Search</Button></Link>
-        </SearchBox>
+      <Link to="/">
+        <Title>Github repo search</Title>
+      </Link>
+      <SearchBox>
+        <Search
+          placeholder="username"
+          onChange={(u) => setHandle(u.target.value)}
+        />
+        <Link to={`/users/${handle}`}>
+          <Button variant="contained" color="primary">
+            Search
+          </Button>
+        </Link>
+      </SearchBox>
     </Body>
   );
 };

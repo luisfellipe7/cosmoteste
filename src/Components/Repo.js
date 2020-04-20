@@ -85,16 +85,15 @@ const Repo = () => {
       );
     });
   return (
-    <div>
-      <Link to='/'>
-      <Button variant="outlined" color="secondary" width>
-        Back
-      </Button></Link>
-      <Body>
-        <h3>{handle} Repositories</h3>
-        {userRepo}
-      </Body>
-    </div>
+    <Body>
+      <h3>{handle} Repositories</h3>
+      {userRepo}
+      <Link to="/">
+        <Button variant="outlined" color="secondary" width>
+          Back
+        </Button>
+      </Link>
+    </Body>
   );
 };
 
