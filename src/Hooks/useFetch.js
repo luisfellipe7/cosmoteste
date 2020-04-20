@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function UserSearch(handle, url) {
   const [info, setInfo] = useState({});
   useEffect(() => {
     async function fetchSearch() {
         try {
-            if(handle == "") return null
+            if(handle === "") return null
           const res = await fetch(url);
           const resJSON = await res.json();
           setInfo(resJSON)

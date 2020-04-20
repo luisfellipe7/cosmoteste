@@ -4,7 +4,12 @@ import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 
 const TotalUsers = styled.div`
-  padding: 15px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+flex-wrap:wrap;
+text-align:center;
+padding: 15px;
 `;
 
 const Users = (props) => {
@@ -29,7 +34,7 @@ const Users = (props) => {
 
   return (
     <TotalUsers>
-      Total users found: {a.info && a.info.total_count}
+        Usuarios encontrados
       {allUsers}
     </TotalUsers>
   );
