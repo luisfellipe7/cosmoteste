@@ -46,6 +46,10 @@ const User = (props) => {
   const classes = useStyles();
   return (
       <UserInfo>
+              <Link to={`/users/${handle}`}>
+      <Button variant="outlined" color="secondary" width>
+        Back
+      </Button></Link>
     <Card className={classes.root} variant="outlined">
       <CardContent>
       <Avatar alt="Remy Sharp" src={info.avatar_url} />
