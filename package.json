@@ -1,4 +1,5 @@
 {
+  "homepage": "http://luisfellipe7.github.io/cosmoteste",
   "name": "cosmoteste",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +17,8 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "2.5.0"
+    "eslint-plugin-react-hooks": "2.5.0",
+    "gh-pages": "^2.2.0"
   }
 }
