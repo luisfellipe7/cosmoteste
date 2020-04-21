@@ -1,6 +1,34 @@
-## Cosmo challenge
+## CosmoBots Challenge
+This project is created for CosmoBots full stack challenge, it uses the GitHub API to search for users and display user information and repositories.
 
-This project is created using the github API to search for users and view the user information and repositories.
+## Tech/framework used
+
+<b>Built with</b>
+- [React](https://reactjs.org)
+
+## Features
+User search
+User details, like Name, email,bio,followers,following and avatar image
+User repositories sorted by the highest number of stars
+
+## Code Example
+Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
+## Installation
+Clone the project
+Travel to the project folder
+run this commands:
+ - npm install
+ - npm start
+
+## API Reference
+
+This project uses the Github API, the documentation for it is found in:  https://developer.github.com/v3/
+
+## Tests
+Describe and show how to run the tests with code examples.
+
+## How to use
 
 ### Search
 You can search for the name or handle of the user and it will show 30 results max showing the handles, if the person your searching it's not there please refine your search.
