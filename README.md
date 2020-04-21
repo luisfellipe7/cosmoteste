@@ -1,14 +1,14 @@
-##Cosmo challenge
+## Cosmo challenge
 
 This project is created using the github API to search for users and view the user information and repositories.
 
-###Search
+### Search
 You can search for the name or handle of the user and it will show 30 results max showing the handles, if the person your searching it's not there please refine your search.
 
-###User Info
+### User Info
 The user info that is shown is Name, picture, email, bio, number of followers and numbers of following
 
-###Repositories
+### Repositories
 The repositories shown is sorted by the highest number of stars to the lowest and has the name of the repositories, how many stars, how many forks and the description.
 
 ## Available Scripts
