@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import useSearchApi from "../Hooks/useFetch";
 import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import "../index.css";
+import Pagination from "@material-ui/lab/Pagination";
 
 const TotalUsers = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   text-align: center;
   padding: 15px;
@@ -44,6 +45,8 @@ const Users = (props) => {
   const a = useSearchApi(searchquery, url);
   console.log(a, "a --");
 
+  const [pages, setPages] = useState("");
+
   const allUsers =
     a &&
     a.items &&
@@ -59,6 +62,7 @@ const Users = (props) => {
     <TotalUsers>
       Usuarios encontrados
       <div className="link">{allUsers}</div>
+      <Pagination count={10} color="primary" />
       <StyledLink component={Link} to="/">
         <Button variant="outlined" color="secondary" width>
           Back
