@@ -16,7 +16,9 @@ Show what the library does as concisely as possible, developers should be able t
 
 ## Installation
 Clone the project
+
 Travel to the project folder
+
 run this commands:
  - npm install
  - npm start
