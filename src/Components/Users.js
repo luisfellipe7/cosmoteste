@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import useSearchApi from "../Hooks/useFetch";
 import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import Pagination from "@material-ui/lab/Pagination";
 
 const TotalUsers = styled.div`
   display: flex;
@@ -15,27 +14,6 @@ const TotalUsers = styled.div`
   padding: 15px;
 `;
 
-const StyledLink = styled.a`
-  text-transform: uppercase;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-  position: relative;
-  display: block;
-  &::hover {
-    color: #5caaef;
-  }
-  &::before {
-    content: "";
-    border-bottom: solid 1px #5caaef;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-  }
-`;
-
 const Users = (props) => {
   let { searchquery } = useParams();
   console.log(searchquery, "searchquery");
@@ -44,8 +22,6 @@ const Users = (props) => {
 
   const a = useSearchApi(searchquery, url);
   console.log(a, "a --");
-
-  const [pages, setPages] = useState("");
 
   const allUsers =
     a &&
@@ -62,12 +38,15 @@ const Users = (props) => {
     <TotalUsers>
       Usuarios encontrados
       <div className="link">{allUsers}</div>
-      <Pagination count={10} color="primary" />
-      <StyledLink component={Link} to="/">
+      <h5>
+        mostrando {a && a.items && a.items.length} resultados de{" "}
+        {a && a.total_count}
+      </h5>
+      <Link to="/">
         <Button variant="outlined" color="secondary" width>
           Back
         </Button>
-      </StyledLink>
+      </Link>
     </TotalUsers>
   );
 };

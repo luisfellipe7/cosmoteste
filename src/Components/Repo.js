@@ -8,6 +8,14 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
+const Repos = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+`;
+
 const Repositories = styled.div`
   display: flex;
   justify-content: center;
@@ -18,6 +26,11 @@ const Repositories = styled.div`
   padding:10px;
   flex-wrap:wrap:
   width:100%;
+`;
+
+const Title = styled.div`
+  font-size: 24px;
+  text-align: center;
 `;
 
 const Body = styled.div`
@@ -93,15 +106,15 @@ const Repo = () => {
         );
       });
   return (
-    <div>
-      <h3>{handle} Repositories</h3>
+    <Repos>
+      <Title>{handle} Repositories</Title>
       <Body>{userRepo}</Body>
       <Link to="/">
         <Button variant="outlined" color="secondary" width>
           Back
         </Button>
       </Link>
-    </div>
+    </Repos>
   );
 };
 

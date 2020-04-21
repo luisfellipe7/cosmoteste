@@ -20,6 +20,9 @@ const Title = styled.div`
   padding-top: 20px;
   padding-bottom: 50px;
   color: #070600;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
 `;
 
 const SearchBox = styled.div`
@@ -47,16 +50,16 @@ const Home = (props) => {
   return (
     <Body>
       <Link to="/">
-        <Title>Github repo search</Title>
+        <Title>Github busca</Title>
       </Link>
       <SearchBox>
         <Search
-          placeholder="username"
+          placeholder="usuario"
           onChange={(u) => setHandle(u.target.value)}
         />
         <Link to={`/users/${handle}`}>
           <Button variant="contained" color="primary">
-            Search
+            Buscar
           </Button>
         </Link>
       </SearchBox>

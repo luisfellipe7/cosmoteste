@@ -75,12 +75,12 @@ const User = (props) => {
         </CardContent>
         <CardActions>
           <Link to={`/repo/${handle}`}>
-            <Button size="small">Repositories</Button>
+            <Button size="small">Repositórios</Button>
           </Link>
         </CardActions>
       </Card>
       <BackButton>
-        <Link to={`/users/${handle}`}>
+        <Link to={`/`}>
           <Button variant="outlined" color="secondary" width>
             Back
           </Button>
