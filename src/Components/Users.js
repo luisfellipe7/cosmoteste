@@ -36,8 +36,13 @@ const Users = (props) => {
 
   return (
     <TotalUsers>
-      Usuarios encontrados
-      <div className="link">{allUsers}</div>
+      {a && a.total_count === 0 && <div>Usuario não encontrado</div>}
+      {a && a.total_count > 0 && (
+        <div>
+          <span>Usuarios encontrados</span>
+          <br /> <div className="link">{allUsers}</div>
+        </div>
+      )}
       <h5>
         mostrando {a && a.items && a.items.length} resultados de{" "}
         {a && a.total_count}
