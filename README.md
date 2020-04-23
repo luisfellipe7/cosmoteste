@@ -92,10 +92,10 @@ A busca dos usuarios é possivel tanto pelo usuario quanto pelo nome, mostrando 
 ### Informaçoes do Usuario
 As informações mostradas são Nome, email, bio, numero de seguidores, numero de seguidos e os repositorios.
 
-### Repositories
+### Repositorios
 Os repositorios são mostrados de forma ordenada de maneira que os que possuem mais estrelas sejam os primeiros da lista.
 
-## Installation
+## Instalação
 Clonar o projeto
 
 Ir até a pasta do projeto
