@@ -82,25 +82,25 @@ O desafio será avaliado através de cinco critérios.
 - [React](https://reactjs.org)
 
 ## Features
-User search
-User details, like Name, email,bio,followers,following and avatar image
-User repositories sorted by the highest number of stars
+Busca de um usuario.
+Detalhes desse usuario, como nome, email,bio, seguidores, seguidos e imagem de avatar.
+Repositorios do usuario ordenados de forma com que os que tem mais estrelas sejam os primeiros.
 
-### Search
-You can search for the name or handle of the user and it will show 30 results max showing the handles, if the person your searching it's not there please refine your search.
+### Busca
+A busca dos usuarios é possivel tanto pelo usuario quanto pelo nome, mostrando até 30 resultados, caso o usuario que queira não apareça é necessario refinar a busca.
 
-### User Info
-The user info that is shown is Name, picture, email, bio, number of followers and numbers of following
+### Informaçoes do Usuario
+As informações mostradas são Nome, email, bio, numero de seguidores, numero de seguidos e os repositorios.
 
 ### Repositories
-The repositories shown is sorted by the highest number of stars to the lowest and has the name of the repositories, how many stars, how many forks and the description.
+Os repositorios são mostrados de forma ordenada de maneira que os que possuem mais estrelas sejam os primeiros da lista.
 
 ## Installation
-Clone the project
+Clonar o projeto
 
-Travel to the project folder
+Ir até a pasta do projeto
 
-run this commands:
+rodar esses comandos no terminnal:
  - yarn install
  - yarn start
  
